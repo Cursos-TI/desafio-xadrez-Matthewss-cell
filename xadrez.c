@@ -67,9 +67,54 @@ int main() {
     // Nível Mestre - Funções Recursivas e Loops Aninhados
     // Sugestão: Substitua as movimentações das peças por funções recursivas.
     // Exemplo: Crie uma função recursiva para o movimento do Bispo.
+// Função recursiva do BISPO
+
+void moverBispoRecursivo(int passo, int limite) {
+
+    if(passo > limite)
+        return;
+
+    printf("(%d,%d)\n", passo, passo);
+
+    moverBispoRecursivo(passo + 1, limite);
+}
+
+void nivelMestre() {
+
+    printf("\n=== NIVEL MESTRE ===\n");
+
+    printf("\nBispo Recursivo:\n");
+    moverBispoRecursivo(1, 5);
+
+    printf("\nCavalo com break e continue:\n");
+
+    for(int x = -2; x <= 2; x++) {
+
+        if(x == 0)
+            continue; // ignora linha central
+
+        for(int y = -2; y <= 2; y++) {
+
+            if(y == 0)
+                continue;
+
+            if((x*x + y*y) == 5) {
+                printf("(%d,%d)\n", x, y);
+            }
+
+            if(x == 2 && y == 2)
+                break;
+        }
+    }
+}
 
     // Sugestão: Implemente a movimentação do Cavalo utilizando loops com variáveis múltiplas e condições avançadas.
     // Inclua o uso de continue e break dentro dos loops.
+int main() {
+
+    nivelNovato();
+    nivelAventureiro();
+    nivelMestre();
 
     return 0;
 }
