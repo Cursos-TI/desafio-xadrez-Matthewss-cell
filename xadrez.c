@@ -17,6 +17,33 @@ int main() {
     // Implementação de Movimentação da Rainha
     // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Rainha para a esquerda.
 
+    void nivelNovato() {
+
+    const int BISPO = 4;
+    const int TORRE = 5;
+    const int RAINHA = 6;
+
+    printf("\n=== NIVEL NOVATO ===\n");
+
+    /* Movimento do BISPO (Diagonal) */
+    printf("\nBispo (Diagonal Direita):\n");
+    for(int i = 1; i <= BISPO; i++) {
+        printf("(%d,%d)\n", i, i);
+    }
+
+    /* Movimento da TORRE (Direita) */
+    printf("\nTorre (Direita):\n");
+    for(int i = 1; i <= TORRE; i++) {
+        printf("(0,%d)\n", i);
+    }
+
+    /* Movimento da RAINHA (Esquerda) */
+    printf("\nRainha (Esquerda):\n");
+    for(int i = 1; i <= RAINHA; i++) {
+        printf("(0,%d)\n", -i);
+    }
+}
+
     // Nível Aventureiro - Movimentação do Cavalo
     // Sugestão: Utilize loops aninhados para simular a movimentação do Cavalo em L.
     // Um loop pode representar a movimentação horizontal e outro vertical.
